@@ -13,12 +13,11 @@ public class Main {
         cartons = clavier.nextInt();
         System.out.print("Taper la capacité du camion : ");
         capaCamion = clavier.nextInt();
-//        System.out.println(cartons);
-//        System.out.println(capaCamion);
-        for (int i = 1; i <= cartons / capaCamion; i++) {
-            int temp = cartons - (capaCamion * i);
-            System.out.println("un voyage de " + temp + " cartons");
+        int reste = cartons % capaCamion;
+        for (int i = 0; i < cartons / capaCamion; i++) {
+            System.out.println("un voyage de " + capaCamion + " cartons");
         }
+        System.out.println("un voyage de " + reste + " cartons");
         clavier.close();
     }
 }
